@@ -326,7 +326,7 @@
 		],
 		'default_size': 3
 	}, {
-		'name': 'browser',
+		'name': 'Browser',
 		'id': '#device-browser',
 		'styles': [
 			['Default', 'default']
