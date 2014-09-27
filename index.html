@@ -1,71 +1,933 @@
-<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Device-shots by MadeByMike</title>
+	<title>Device Shots</title>
+	<style>/*! normalize.css v1.1.3 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}h2{font-size:1.5em;margin:0.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:0.83em;margin:1.67em 0}h6{font-size:0.67em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace, serif;_font-family:'courier new', monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{-moz-box-sizing:border-box;box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}html{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:62.5%;-webkit-font-smoothing:antialiased;line-height:1.5;color:#333}body{font-size:1.4rem}p{margin-top:1em}html{height:100%}body{height:100%;margin:0;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:columns;-ms-flex-flow:columns;flex-flow:columns;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-repeat:no-repeat;background-attachment:fixed;background-image:-webkit-linear-gradient(#c3acc2, #645685);background-image:linear-gradient(#c3acc2, #645685)}header{-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto}main{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1;-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center;min-height:80%}header{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#1d262b;color:#FFF}#device-settings{-webkit-order:1;-ms-flex-order:1;order:1;-webkit-flex:1 100%;-ms-flex:1 100%;flex:1 100%;position:relative}#device-settings a{padding:2rem 6rem;background:url("img/icon_gear.svg") 15% 47% no-repeat;background-color:#233037;display:inline-block;color:#FFF;text-decoration:none}#device-settings-form{position:absolute;z-index:999;top:120%;left:2rem;width:15rem;background:#233037;opacity:0;border-radius:1rem;font-size:1.2rem;padding:2rem 1.5rem;-webkit-transition:opacity .3s;transition:opacity .3s;pointer-events:none}#device-settings-form.open{opacity:1;pointer-events:auto}#device-settings-form:before{content:'';position:absolute;left:50%;top:-1rem;margin-left:-7px;height:0;width:0;border-left:1rem solid transparent;border-right:1rem solid transparent;border-bottom:1rem solid #233037}#device-settings-form fieldset{margin:0;padding:0;border:1px solid transparent}#device-settings-form fieldset label{display:block;margin:.5rem}#device-settings-form .styling-select-boxes-still-sucks{position:relative;display:block}#device-settings-form .styling-select-boxes-still-sucks select{display:inline-block;width:100%;margin:0;padding:.5rem 3.5rem .5rem 1rem;line-height:2;color:#555;background-color:#eee;border:0;border-radius:.3rem;cursor:pointer;outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}#device-settings-form .styling-select-boxes-still-sucks select:active{color:#fff;background-color:#0074d9}#device-settings-form .styling-select-boxes-still-sucks select:focus{box-shadow:0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9}#device-settings-form .styling-select-boxes-still-sucks select:focus:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}#device-settings-form .styling-select-boxes-still-sucks select:hover{background-color:#ddd}#device-settings-form .styling-select-boxes-still-sucks select::-ms-expand{display:none}#device-settings-form .styling-select-boxes-still-sucks:after{position:absolute;top:0;bottom:0;right:0;display:inline-block;content:"";width:2.5rem;pointer-events:none;color:#555;background-color:#7f9CBC;border-left:solid 1px #313b44;border-radius:0 .3rem .3rem 0;background-image:url("img/icon_arrow.svg");background-position:50% 50%;background-repeat:no-repeat}#device-settings-form .styling-select-boxes-still-sucks option{background-color:white}@-moz-document url-prefix(){.select select{text-indent:0.01px;text-overflow:'';padding-right:1rem}}@media screen and (min-width: 0 \0){.select select{z-index:1;padding:.5rem 1.5rem .5rem 1rem}.select select:after{z-index:5}.select select:before{position:absolute;top:0;right:1rem;bottom:0;z-index:2;content:"";display:block;width:1.5rem;background-color:#eee}.select select:hover,.select select:focus,.select select:active{color:#555;background-color:#eee}}#page-title{-webkit-order:2;-ms-flex-order:2;order:2;-webkit-flex:2 100%;-ms-flex:2 100%;flex:2 100%;font-size:2rem;text-align:center;background:url("img/logo_deviceshots.svg") 50% 50% no-repeat;text-indent:100%;white-space:nowrap;overflow:hidden}#export-form{-webkit-order:2;-ms-flex-order:2;order:2;-webkit-flex:1 100%;-ms-flex:1 100%;flex:1 100%;text-align:right}#export-form button{margin-right:2rem;padding:.5em 4rem .5em 2rem;color:#FFF;background:url("img/icon_export.svg") 95% 47% no-repeat;background-color:#fa4f1a;border:solid 1px transparent;border-radius:.3rem}#export-form button:hover,#export-form button :focus{background-color:#c7431a}#messages{z-index:99;width:100%;position:relative}#messages .message{-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;width:100%;padding:1rem;background:rgba(254,236,166,0.9);text-align:center}#messages .message p{padding:0;margin:0}#messages .message .close{display:inline-block;width:35px;float:right;margin-left:.5rem;background:url("img/icon_close.svg") 50% 50% no-repeat;text-indent:100%;white-space:nowrap;overflow:hidden}#file-select-no-drag{display:none}main{position:relative}.dragging main:after{content:'';background-color:rgba(255,255,255,0.8);background-image:url("img/background_drag.svg");background-position:50% 50%;background-repeat:no-repeat;background-size:50%;position:absolute;top:0;bottom:0;width:100%}.dragging #device image{display:none}main svg{display:none}main .active{display:block;cursor:pointer}
+</style>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Device-shots</h1>
-        <p>Create device mock-ups in the browser without uploads</p>
+	<header>
+		<h1 id="page-title">Device Shots</h1>
+		<nav id="device-settings">
+			<a href="javascript:;">
+				Device Settings
+			</a>
+			<form id="device-settings-form">
+				<input id="file-select-no-drag" type="file" accept=".png,.jpg,.jpeg,.gif">
+				<fieldset>
+					<label for="device-settings-type">Device type</label>
+					<div class="styling-select-boxes-still-sucks">
+						<select id="device-settings-type">
+						</select>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="device-settings-style">Device style</label>
+					<div class="styling-select-boxes-still-sucks">
+						<select id="device-settings-style">
+						</select>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="device-settings-size">Output size</label>
+					<div class="styling-select-boxes-still-sucks">
+						<select id="device-settings-size">
+						</select>
+					</div>
+				</fieldset>
+			</form>
+		</nav>
+		<form id="export-form">
+			<button>Export</button>
+		</form>
+	</header>
+	<div id="messages"></div>
+  <main id="main">
+  
+<svg version="1.1" id="device-browser" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 665 430" enable-background="new 0 0 665 430" xml:space="preserve" height="570" width="760">
+<style type="text/css">
+	.pane_border_grey {
+	  fill:none;
+    stroke:#8E8E8E;
+    stroke-width:0.2;
+    stroke-miterlimit:10;
+  }
+	.pane_border_white {
+	  fill:url(#pane_gradient);
+    stroke:#FFFFFF;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+	.navigate_border_white {
+	  fill:#F1F2F2;
+    stroke:#FFFFFF;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+	.navigate_border_grey {
+	  fill:#F1F2F2;
+    stroke:#8E8E8E;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+	.navigate_seperator {
+	  fill:#8E8E8E;
+  }
+	.navigate_btn {
+	  fill:#BCBEC0;
+  }
+	.st6{
+	  fill:#F1F2F2;
+    stroke:#FFFFFF;
+    stroke-width:0.2;
+    stroke-miterlimit:10;
+  }
+	.st7{
+	  fill:#F1F2F2;
+    stroke:#8E8E8E;
+    stroke-width:0.2;
+    stroke-miterlimit:10;
+  }
+	.bar_border_white{
+	  fill:#FFFFFF;
+    stroke:#FFFFFF;
+    stroke-width:0.2;
+    stroke-miterlimit:10;
+  }
+	.bar_border_grey {
+	  fill:#FFFFFF;
+    stroke:#8E8E8E;
+    stroke-width:0.2;
+    stroke-miterlimit:10;
+  }
+	.light_red {
+	  fill:#E76A58;
+    stroke:#FDFDFF;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+	.light_yellow {
+	  fill:#FEC052;
+    stroke:#FDFDFF;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+	.light_green {
+	  fill:#81D154;
+    stroke:#FDFDFF;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+	.content_area {
+	  fill:#fff;
+    stroke:#8E8E8E;
+    stroke-width:0.1;
+    stroke-miterlimit:10;
+  }
+</style>
+<defs>
+  <linearGradient id="pane_gradient" gradientUnits="userSpaceOnUse" x1="251.0253" y1="76.3281" x2="251.0253" y2="44.2446">
+		<stop  offset="0" style="stop-color:#D1D3D4"/>
+		<stop  offset="0.123" style="stop-color:#D1D3D4"/>
+		<stop  offset="1" style="stop-color:#D1D3D4"/>
+	</linearGradient>
+</defs>
+<g id="Chrome_x5F_pane">
+	<path id="chrome_x5F_pane_x5F_greyborder" class="pane_border_grey" d="M660.4,51.9V10.2c0-2.1-2.6-3.8-5.7-3.8H10.9c-3.1,0-5.7,1.7-5.7,3.8v41.9h655.2V51.9
+		z"/>
+	<path id="chrome_x5F_pane_x5F_whiteborder" class="pane_border_white" d="M660.3,51.9V10.2c0-2.1-2.6-3.8-5.7-3.8H10.9c-3.1,0-5.7,1.7-5.7,3.8v41.9h655.1
+		V51.9z"/>
+</g>
+<g id="Chrome_x5F_navigate">
+	<path id="chrome_x5F_navigate_x5F_whiteborder" class="navigate_border_white" d="M47.8,41.5c0,1.4-1.1,2.7-2.7,2.7H14.9c-1.4,0-2.7-1.1-2.7-2.7V29.4
+		c0-1.4,1.1-2.7,2.7-2.7h30.2c1.4,0,2.7,1.1,2.7,2.7C47.8,29.4,47.8,41.5,47.8,41.5z"/>
+	<path id="chrome_x5F_navigate_x5F_greyborder" class="navigate_border_grey" d="M47.8,41.4c0,1.4-1.1,2.7-2.7,2.7H14.9c-1.4,0-2.7-1.1-2.7-2.7V29.3
+		c0-1.4,1.1-2.7,2.7-2.7h30.2c1.4,0,2.7,1.1,2.7,2.7C47.8,29.3,47.8,41.4,47.8,41.4z"/>
+	<rect id="chrome_x5F_navigate_x5F_seperator" class="navigate_seperator" x="30" y="26.6" width="0.1" height="17.4"/>
+	<polygon id="chrome_x5F_navigate_x5F_forward" class="navigate_btn" points="36.6,35 36.6,32.4 38.7,33.7 40.8,35 38.7,36.1 36.6,37.4 	"/>
+	<polygon id="chrome_x5F_navigate_x5F_back" class="navigate_btn" points="22.6,35 22.6,32.4 20.5,33.7 18.3,35 20.5,36.1 22.6,37.4 	"/>
+</g>
+<g id="Chrome_x5F_address">
+	<g id="chrome_x5F_add_x5F_plus">
+		<path id="chrome_x5F_address_x5F_plus_x5F_whiteborder" class="bar_border_white" d="M106.8,44.1H93.6c-2.4,0-4.3-1.9-4.3-4.3v-9c0-2.4,1.9-4.3,4.3-4.3
+			h13.3V44.1z"/>
+		<path id="chrome_x5F_address_x5F_plus_x5F_greyborder" class="bar_border_grey" d="M106.8,43.7H93.6c-2.4,0-4.3-1.9-4.3-4.3v-9c0-2.4,1.9-4.3,4.3-4.3h13.3
+			V43.7z"/>
+		<path id="chrome_x5F_address_x5F_plus" class="navigate_btn" d="M100.4,34.8h-2v-2c0-0.3-0.1-0.6-0.4-0.6c-0.3,0-0.4,0.3-0.4,0.6v2h-2
+			c-0.3,0-0.6,0.1-0.6,0.4c0,0.3,0.3,0.4,0.6,0.4h2v2c0,0.3,0.1,0.6,0.4,0.6c0.3,0,0.4-0.3,0.4-0.6v-2h2c0.3,0,0.6-0.1,0.6-0.4
+			C101,35,100.7,34.8,100.4,34.8z"/>
+	</g>
+	<rect id="chrome_x5F_address_x5F_whiteborder" class="bar_border_white" x="106.4" y="26.6" width="373.9" height="17.5"/>
+	<rect id="chrome_x5F_address_x5F_greyborder" class="bar_border_grey"  x="106.4" y="26.2" width="373.9" height="17.5"/>
+</g>
+<g id="Lights">
+	<circle id="light_x5F_red" class="light_red" cx="16.5" cy="16.7" r="4.1"/>
+	<circle id="light_x5F_yellow" class="light_yellow" cx="29" cy="16.7" r="4.1"/>
+	<circle id="light_x5F_green" class="light_green" cx="41.5" cy="16.7" r="4.1"/>
+</g>
+<path id="Content_x5F_area" class="content_area" d="M660.6,52.1v0.1H5.1v363.1c0,3.1,2.6,5.7,5.7,5.7h644.1c3.1,0,5.7-2.6,5.7-5.7V52.1L660.6,52.1z"/>
+<image xmlns="http://www.w3.org/2000/svg" class="device-image" xlink:href="" x="5" y="52" width="656" height="369"/>
+<path id="chrome_x5F_search_x5F_whiteborder" d="M647.6,35.3c0,4.8-3.8,8.8-8.7,8.8H507.1c-4.8,0-8.7-4-8.7-8.8l0,0
+	c0-4.8,3.8-8.8,8.7-8.8h131.8C643.7,26.6,647.6,30.4,647.6,35.3L647.6,35.3z"/>
+<path id="chrome_x5F_search_x5F_greyborder" class="bar_border_grey" d="M647.6,35c0,4.8-3.8,8.8-8.7,8.8H507.1c-4.8,0-8.7-4-8.7-8.8l0,0
+	c0-4.8,3.8-8.8,8.7-8.8h131.8C643.7,26.2,647.6,30.1,647.6,35L647.6,35z"/>
+</svg>
 
-        <p class="view"><a href="https://github.com/MadeByMike/device-shots">View the Project on GitHub <small>MadeByMike/device-shots</small></a></p>
+<svg class="realistic dark" width="250" height="500" version="1.1" id="device-galaxy" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 238.5 455" style="enable-background:new 0 0 239 455;" xml:space="preserve">
+  <style type="text/css">
+    /* Phone shape styles */
+    .phone_bg {
+      fill: #FFF;
+      stroke: #3D4045;
+      stroke-width: 0.5;
+      stroke-miterlimit: 10;
+    }
+		.dark .phone_bg{
+			fill: #333;
+		}
+    .phone_outline_border {
+      fill: none;
+      stroke: #02060D;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+    }
+    .phone_outline_inner {
+      fill: none;
+      stroke: #02060D;
+      stroke-width: 0.5;
+      stroke-miterlimit: 10;
+    }
+		.phone_highlight{
+			display: none;
+			fill: #bee1e8;
+			mask: url(#highlight_mask);
+		}
+		.realistic .phone_highlight{
+			display: block;
+		}
+    #dot_pattern {
+      fill: #DDD;
+    }
+    .dark #dot_pattern {
+      fill: #666;
+		}
+    .realistic #dot_pattern {
+      fill: #222;
+    }
+    .phone_bg_pattern {
+      fill: url(#dot_pattern);
+    }
+		.realistic .phone_bg_pattern {
+			mask: url(#highlight_mask);
+		}
+    /* Grill styles */
+    .grill_bg {
+      fill: #B6B6B7;
+      stroke: #02060D;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+    .grill_bg circle {
+      stroke: #727272;
+      stroke-width: 0.2;
+    }
+
+		.btn_main_gradient {
+			fill: #EAEAEA;
+		}
+		.btn_main_gradient,
+		.btn_main_front{
+				fill: #FFF;
+				stroke: #070807;
+				stroke-width: 0.75;
+		}
+		.btn_main_front{
+			stroke-width: 1;
+		}
+
+		.dark .btn_main_gradient,
+		.dark .btn_main_front{
+			fill: #555;
+			stroke: #222;
+		}
+
+		.realistic.dark .btn_main_gradient,
+		.realistic.dark .btn_main_front{
+			fill: #777;
+			stroke: #444;
+		}
+
+    .btn_main_outline {
+      fill: none;
+      stroke: #070807;
+      stroke-width: 0.75;
+      stroke-miterlimit: 10;
+    }
+    .btn_main_shadow {
+      fill: #0E1013;
+    }
+    .btn_main_front {
+      fill: #FFF;
+      stroke: #0D0C0D;
+      stroke-width: 0.5;
+      stroke-miterlimit: 10;
+    }
+		.btn_interface_fill {
+			fill: #A3A8AA;
+		}
+		.dark .btn_interface_fill {
+			fill: #555;
+		}
+		.realistic.dark .btn_interface_fill {
+			fill: #999;
+		}
+    /* Screen styles */
+    .screen_bg {
+      fill: #050505;
+    }
+
+		/* lineart */
+
+		.lineart path,
+		.lineart rect,
+		.lineart circle,
+		.lineart ellipse {
+			fill: #eaeaea !important;
+			stroke: #888 !important;
+			stroke-width: 0.5 !important;
+		}
+		.lineart .screen rect {
+			fill: #fff !important;
+		}
+
+		/* lineart dark*/
+
+		.lineart.dark path,
+		.lineart.dark rect,
+		.lineart.dark circle,
+		.lineart.dark ellipse {
+			fill: #333 !important;
+			stroke: #EAEAEA !important;
+		}
+		.lineart.dark .screen rect {
+			fill: #888 !important;
+		}
+
+		/* wireframe */
+
+		.wireframe path,
+		.wireframe rect,
+		.wireframe circle,
+		.wireframe ellipse {
+			fill: none !important;
+			stroke: #fff !important;
+			stroke-width: 0.5 !important;
+		}
+		.wireframe .speaker-inset .grill {
+			visibility: visible;
+		}
+		/* wireframe dark */
+
+		.wireframe.dark path,
+		.wireframe.dark rect,
+		.wireframe.dark circle,
+		.wireframe.dark ellipse {
+			stroke: #000 !important;
+		}
+
+  </style>
+  <defs>
+		<linearGradient xmlns="http://www.w3.org/2000/svg" id="fade_grad" y2="1" x2="0">
+			<stop offset="0" stop-color="white" stop-opacity="0" />
+			<stop offset="1" stop-color="white" stop-opacity=".5" />
+		</linearGradient>
+		<linearGradient xmlns="http://www.w3.org/2000/svg" id="highlight_grad" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" stop-color="white" stop-opacity="0" />
+			<stop offset="1" stop-color="white" stop-opacity=".5" />
+		</linearGradient>
+		<linearGradient id="reflection-grad" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.2"></stop>
+			<stop offset="0.1413" style="stop-color:#FFFFFF;stop-opacity:0.1859"></stop>
+			<stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.1"></stop>
+		</linearGradient>
+		<mask id="fade_mask" maskContentUnits="objectBoundingBox">
+			<rect width="1" height="1" fill="url(#fade_grad)" />
+		</mask>
+		<mask id="highlight_mask" maskContentUnits="objectBoundingBox">
+			<rect width="1" height="1" fill="url(#highlight_grad)" />
+		</mask>
+    <pattern id="dot_pattern" patternUnits="userSpaceOnUse" x="0" y="0" x2="455" y2="239" viewBox="0 0 5 5" width="2.5" height="2.5">
+      <circle cx="2.5" cy="2.5" r="0.7" />
+    </pattern>
+  </defs>
+  <g id="phone_main">
+    <path class="phone_bg" d="M234,419.2c0,8.3-3.1,15.8-8.3,21.5c-5.9,6.5-17.3,10.5-26.7,10.5
+			c0,0-58.9,0.4-79.5,0.4S40,451.2,40,451.2c-9.4,0-20.9-4.1-26.7-10.5C8.2,435,5,427.5,5,419.2V40.5c0-7.9,2.8-18.1,7.5-23.6
+			C18.4,9.9,30.2,5.5,40,5.5c0,0,58.9-0.9,79.5-0.9S199,5.5,199,5.5c9.8,0,21.6,4.4,27.5,11.4c4.7,5.6,7.5,15.8,7.5,23.6V419.2z" />
+    <path class="phone_outline_border" d="M119.5,449.1c-20.4,0-78.9-0.4-79.5-0.4c-9.3,0-19.8-4.1-24.9-9.7
+			c-4.9-5.4-7.6-12.5-7.6-19.8V40.5c0-7.9,3-17.3,6.9-22C19.6,12.4,30.4,8,40,8c0.6,0,59.1-0.9,79.5-0.9S198.4,8,199,8
+			c9.7,0,20.5,4.4,25.6,10.5c4,4.7,6.9,14.2,6.9,22v378.8c0,7.3-2.7,14.4-7.6,19.8c-5.1,5.6-15.5,9.7-24.9,9.7
+			C198.4,448.7,139.9,449.1,119.5,449.1z" />
+    <path class="phone_outline_inner" d="M119.5,446.6c-20.4,0-78.9-0.4-79.5-0.4c-8.6,0-18.5-3.8-23-8.9c-4.5-5-7-11.4-7-18.1
+			V40.5c0-7.3,2.7-16.1,6.4-20.4c4.6-5.5,14.8-9.6,23.6-9.6c0.7,0,59.1-0.9,79.5-0.9s78.8,0.9,79.4,0.9c8.9,0,19.1,4.1,23.7,9.6
+			c3.6,4.3,6.4,13.1,6.4,20.4v378.8c0,6.7-2.5,13.2-7,18.1c-4.6,5.1-14.5,8.9-23,8.9C198.4,446.2,139.9,446.6,119.5,446.6z" />
+    <path class="phone_highlight" d="M119.5,446.6c-20.4,0-78.9-0.4-79.5-0.4c-8.6,0-18.5-3.8-23-8.9c-4.5-5-7-11.4-7-18.1V40.5
+			c0-7.3,2.7-16.1,6.4-20.4c4.6-5.5,14.8-9.6,23.6-9.6c0.7,0,59.1-0.9,79.5-0.9s78.8,0.9,79.4,0.9c8.9,0,19.1,4.1,23.7,9.6
+			c3.6,4.3,6.4,13.1,6.4,20.4v378.8c0,6.7-2.5,13.2-7,18.1c-4.6,5.1-14.5,8.9-23,8.9C198.4,446.2,139.9,446.6,119.5,446.6z" />
+    <path class="phone_bg_pattern" d="M119.5,446.6c-20.4,0-78.9-0.4-79.5-0.4c-8.6,0-18.5-3.8-23-8.9c-4.5-5-7-11.4-7-18.1V40.5
+			c0-7.3,2.7-16.1,6.4-20.4c4.6-5.5,14.8-9.6,23.6-9.6c0.7,0,59.1-0.9,79.5-0.9s78.8,0.9,79.4,0.9c8.9,0,19.1,4.1,23.7,9.6
+			c3.6,4.3,6.4,13.1,6.4,20.4v378.8c0,6.7-2.5,13.2-7,18.1c-4.6,5.1-14.5,8.9-23,8.9C198.4,446.2,139.9,446.6,119.5,446.6z" />
+  </g>
+  <g id="grill">
+    <path class="grill_bg" d="M103.2,20.5c-1.3,0-2.3-1-2.3-2.3s1-2.3,2.3-2.3h33.6c1.3,0,2.3,1,2.3,2.3s-1,2.3-2.3,2.3 H103.2z" />
+    <circle class="grill_dots" cx="103.7" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="105.8" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="108.1" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="110.2" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="112.4" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="114.6" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="116.8" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="119" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="121.3" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="123.4" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="125.6" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="127.8" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="130" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="132.2" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="134.3" cy="18.2" r="0.9" />
+    <circle class="grill_dots" cx="136.6" cy="18.2" r="0.9" />
+  </g>
+  <g id="btns_interface">
+    <g id="button_main">
+      <path class="btn_main_gradient" d="M145.3,428.2c0,3.3-2.7,6-6,6h-38.5c-3.3,0-6-2.7-6-6v-3.4c0-3.3,2.7-6,6-6h38.5c3.3,0,6,2.7,6,6V428.2z" />
+      <path class="btn_main_front" d="M100.8,432.4c-2.3,0-4.2-1.9-4.2-4.2v-3.4c0-2.3,1.9-4.2,4.2-4.2h38.5c2.3,0,4.2,1.9,4.2,4.2v3.4
+				c0,2.3-1.9,4.2-4.2,4.2H100.8z" />
+    </g>
+    <g id="btn_window">
+      <path class="btn_interface_fill" d="M61.9,424.3h-0.5H59h-4h-2.4h-0.5c-0.3,0-0.5,0.2-0.5,0.5s0,0.3,0,0.5v0.7v2.9v0.7
+				c0,0.2,0,0.2,0,0.5s0.2,0.5,0.5,0.5h0.5H55h4h2.4h0.5c0.3,0,0.5-0.2,0.5-0.5s0-0.3,0-0.5V429v-2.9v-0.7c0-0.2,0-0.2,0-0.5
+				C62.4,424.5,62.2,424.3,61.9,424.3z M61.4,426.1v2.9v0.7H59h-4h-2.4V429v-2.9v-0.7H55h4h2.4V426.1z" />
+      <path class="btn_interface_fill" d="M64,422.2L64,422.2C63.9,422.2,63.9,422.2,64,422.2h-9.4c-0.3,0-0.5,0.2-0.5,0.5
+				s0,0.3,0,0.5h9.4v5.3c0.2,0,0.2,0,0.5,0c0.3,0,0.5-0.2,0.5-0.5v-5.3C64.5,422.4,64.3,422.2,64,422.2z" />
+    </g>
+    <path class="btn_interface_fill" d="M184.3,423.8h-4.2v-1.4l-4.3,1.5c0,0-0.4,0.1-0.4,0.5s0.4,0.5,0.4,0.5l4.3,1.5v-1.5h4.2
+			c1.3,0,2.3,1,2.3,2.3s-1,2.3-2.3,2.3h-7.9v1.1h7.9c1.9,0,3.4-1.5,3.4-3.4S186.1,423.8,184.3,423.8z" />
+  </g>
+  <g class="camera">
+    <circle cx="148.2" cy="19.9" r="2.8" />
+    <circle cx="157.4" cy="19.9" r="2.8" />
+    <circle cx="204.5" cy="27.9" r="2.8" />
+  </g>
+  <g class="screen">
+    <rect x="18" y="49" width="202" height="358" />
+    <image class="device-image" xlink:href="" x="18" y="49" width="202" height="358" />
+  </g>
+</svg>
+
+<svg class="light wireframe" version="1.1" id="device-ipad" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="198 61 565 439" xml:space="preserve" height="570" width="760">
+  <style type="text/css">
+    .metal-border {
+      fill: #D8D8D8;
+      stroke: #A8A8A8;
+    }
+    .face {
+      fill: url(#plastic-grad);
+      stroke: #282828;
+      stroke-width: 2;
+    }
+    .screen {
+      fill: #3F3F3F;
+      stroke: #515151;
+    }
+    .camera-1 {
+      fill: #8E8E8E;
+    }
+    .camera-2 {
+      fill: #4F14A6;
+      stroke: #353535;
+    }
+    .camera-3 {
+      fill: #12094B;
+    }
+    .camera-shine {
+      fill: #8071A5;
+    }
+    .button-circle {
+      opacity: 0.4;
+      fill: url(#button-grad);
+      stroke: #444444;
+    }
+    .button-square {
+      fill: none;
+      stroke: #FFFFFF;
+    }
+    .button-shadow {
+      opacity: 0.5;
+      clip-path: url(#button-clip);
+    }
+
+		.light .face{
+			fill: url(#plastic-grad-light);
+			stroke: #c1c1c1;
+		}
+		.light .button-circle{
+			fill: url(#button-grad-light);
+		}
+		.light .button-shadow {
+			fill: #EAEAEA;
+		}
+		.light .button-square {
+			stroke: #999;
+		}
+
+		/* lineart */
+
+		.lineart path,
+		.lineart rect,
+		.lineart circle,
+		.lineart ellipse {
+			fill: #eaeaea !important;
+			stroke: #888 !important;
+			stroke-width: 1;
+		}
+		.lineart .screen rect {
+			fill: #fff !important;
+		}
+		.lineart .speaker-inset .grill {
+			visibility: visible;
+
+		}
+		.lineart .button-shadow {
+					display: none;
+		}
+
+		/* lineart dark*/
+
+		.lineart.dark path,
+		.lineart.dark rect,
+		.lineart.dark circle,
+		.lineart.dark ellipse {
+			fill: #333 !important;
+			stroke: #EAEAEA !important;
+		}
+		.lineart.dark .screen rect {
+			fill: #888 !important;
+		}
+
+		/* wireframe */
+
+		.wireframe path,
+		.wireframe rect,
+		.wireframe circle,
+		.wireframe ellipse {
+			fill: none !important;
+			stroke: #fff !important;
+			stroke-width: 1;
+		}
+		.wireframe .button-shadow {
+					display: none;
+		}
+
+		/* wireframe dark */
+
+		.wireframe.dark path,
+		.wireframe.dark rect,
+		.wireframe.dark circle,
+		.wireframe.dark ellipse {
+			stroke: #000 !important;
+		}
 
 
-        <ul>
-          <li><a href="https://github.com/MadeByMike/device-shots/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/MadeByMike/device-shots/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/MadeByMike/device-shots">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+  </style>
+  <defs>
+		<linearGradient id="plastic-grad" gradientUnits="userSpaceOnUse" x1="722.4274" y1="39.626" x2="238.3845" y2="523.669" gradientTransform="matrix(1 0 0 -1 0 562)">
+			<stop offset="0" style="stop-color:#282828" />
+			<stop offset="0.1052" style="stop-color:#1F1F1F" />
+			<stop offset="0.3614" style="stop-color:#0F0E0E" />
+			<stop offset="0.6438" style="stop-color:#050404" />
+			<stop offset="1" style="stop-color:#020101" />
+		</linearGradient>
+			<linearGradient id="plastic-grad-light" gradientUnits="userSpaceOnUse" x1="722.4274" y1="39.626" x2="238.3845" y2="523.669" gradientTransform="matrix(1 0 0 -1 0 562)">
+				<stop offset="0" style="stop-color:#dbdbdb" />
+				<stop offset="1" style="stop-color:#fcfcfc" />
+			</linearGradient>
+		<linearGradient id="button-grad" gradientUnits="userSpaceOnUse" x1="354.4575" y1="352.4209" x2="354.4575" y2="377.5789" gradientTransform="matrix(-4.371139e-008 1 1 4.371139e-008 -138.6372 -72.7031)">
+			<stop offset="0" style="stop-color:#575858" />
+			<stop offset="1" style="stop-color:#282828" />
+		</linearGradient>
+	<linearGradient id="button-grad-light" gradientUnits="userSpaceOnUse" x1="354.4575" y1="352.4209" x2="354.4575" y2="377.5789" gradientTransform="matrix(-4.371139e-008 1 1 4.371139e-008 -138.6372 -72.7031)">
+		<stop offset="0" style="stop-color:#EAEAEA" />
+		<stop offset="1" style="stop-color:#999999" />
+	</linearGradient>
+    <clipPath id="button-clip">
+      <circle cx="226.4" cy="281.5" r="12.7" />
+    </clipPath>
+  </defs>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+  <path class="metal-border" d="M762.5,479.5c0,11-9,20-20,20h-524c-11,0-20-9-20-20v-398c0-11,9-20,20-20h524c11,0,20,9,20,20V479.5z" />
+  <path class="face" d="M760,477c0,11-9,19-20,19H221c-11,0-20-7-20-19V84c0-11,9-20,20-20h519c11,0,20,9,20,20V477z" />
+  <rect x="253.1" y="109.3" class="screen" width="458" height="345" />
+  <image class="device-image" xlink:href="" x="253.1" y="109.3" width="458" height="345" />
+  <g class="camera">
+    <path class="camera-shine" d="M736.6,280.2c0,0.3-0.2,0.5-0.5,0.5l0,0c-0.3,0-0.5-0.2-0.5-0.5V280c0-0.3,0.2-0.5,0.5-0.5l0,0
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	c0.3,0,0.5,0.2,0.5,0.5V280.2z" />
+    <circle class="camera-1" cx="736.8" cy="281.6" r="3.8" />
+    <circle class="camera-2" cx="736.6" cy="281.4" r="3.3" />
+    <ellipse class="cammer-3" cx="736.5" cy="281.4" rx="0.9" ry="1" />
+  </g>
+  <g class="button">
+    <circle class="button-circle" cx="226.4" cy="281.8" r="12.6" />
+    <path class="button-square" d="M224.1,285.8c-1,0-1.8-0.8-1.8-1.8v-4.5c0-1,0.8-1.8,1.8-1.8h4.5c1,0,1.8,0.8,1.8,1.8v4.5c0,1-0.8,1.8-1.8,1.8H224.1z" />
+    <circle class="button-shadow" cx="246.7" cy="281.8" r="20.4" />
+  </g>
+</svg>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<svg width="250" height="500" id="device-iphone" class="realistic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 280 560"  xml:space="preserve">
+  <style>
+    /* Defaults */
+    .reflection {
+      visibility: hidden;
+    }
+    .screen rect {
+      fill: #ddd;
+    }
+    .screen image {
+      fill: red;
+      stroke: #515151;
+      stroke-miterlimit: 10;
+    }
+    .circle-button circle {
+      stroke: #222;
+    }
+    .circle-button path {
+      stroke: #999;
+    }
+    .button-shadow circle {
+      visibility: hidden;
+    }
+    .camera circle,
+    .camera ellipse {
+      fill: #333;
+    }
+    .speaker-inset path {
+      fill: #333;
+    }
+    .speaker-inset .speaker-inset-shadow {
+      fill: #000;
+    }
+    .speaker-inset .grill {
+      visibility: hidden;
+    }
+    .grill ellipse {
+      fill: #090405;
+    }
+    .grill ellipse:nth-child(odd) {
+      fill: #2e2e2f;
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+    }
+    /* realistic */
+    .realistic .speaker-inset .grill {
+      visibility: visible;
+    }
+    .realistic .metal-buttons rect,
+    .realistic .metal-buttons path {
+      fill: #b7b7b7;
+      stroke: #a8a8a8;
+      stroke-miterlimit: 10;
+    }
+    .realistic .metal-body-shadows rect,
+    .realistic .metal-buttons-shadows rect {
+      fill: #6d6d6d;
+    }
+    .realistic .reflection path {
+      fill: url("#reflection-grad");
+      visibility: visible;
+    }
+    .realistic .circle-button circle {
+      fill: url("#grey-grad");
+      opacity: 0.4;
+      stroke: #444;
+      stroke-miterlimit: 10;
+    }
+    .realistic .circle-button path {
+      fill: none;
+      stroke: #fff;
+    }
+    .realistic .camera circle {
+      fill: #4f14a6;
+      stroke: #353535;
+      stroke-miterlimit: 10;
+    }
+    .realistic .speaker-inset path {
+      fill: url("#grey-grad");
+    }
+    .realistic .speaker-inset .speaker-inset-shadow {
+      fill: #111;
+    }
+    .realistic .screen image {
+      fill: #666;
+      stroke: #515151;
+      stroke-miterlimit: 10;
+    }
+    .realistic .button-shadow circle {
+      clip-path: url("#button-shadow-clip");
+      opacity: 0.5;
+      visibility: visible;
+    }
+    .realistic .metal-body path {
+      fill: #d8d8d8;
+      stroke: #a8a8a8;
+      stroke-miterlimit: 10;
+    }
+    .realistic .phone-face path {
+      fill: url("#iphone-grad");
+      stroke: #282828;
+      stroke-miterlimit: 10;
+      stroke-width: 2;
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+    }
+    /* light */
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+    .light .phone-face path {
+      fill: #fff;
+      stroke: #fff;
+    }
+    .light .circle-button circle {
+      fill: #f8f8f8;
+      stroke: #cfcfcf;
+    }
+    .light .circle-button path {
+      fill: #fff;
+      stroke: #808080;
+    }
+    .light .button-shadow circle {
+      opacity: 0.05;
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+    }
+    /* simple - light */
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+    .simple.light .metal-buttons,
+    .simple.light .metal-body {
+      fill: #fff;
+      stroke: #fff;
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+    }
+    .simple.light .speaker-inset .speaker-inset-shadow {
+      fill: #fff;
+    }
+    .simple.light .camera circle,
+    .simple.light .camera ellipse {
+      fill: #ddd;
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/MadeByMike">MadeByMike</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    }
+    /* realistic - light */
+
+    .realistic.light .camera circle {
+      fill: #42266b;
+    }
+    .realistic.light .speaker-inset path {
+      fill: #888;
+    }
+    .realistic.light .speaker-inset .speaker-inset-shadow {
+      fill: #eaeaea;
+    }
+    .realistic.light .grill ellipse {
+      fill: #aaa;
+    }
+    .realistic.light .grill ellipse:nth-child(odd) {
+      fill: #ddd;
+
+    }
+    /* lineart */
+
+    .lineart path,
+    .lineart rect,
+    .lineart circle,
+    .lineart ellipse {
+      fill: #eaeaea !important;
+      stroke: #888 !important;
+    }
+    .lineart .screen rect {
+      fill: #fff !important;
+    }
+    .lineart .speaker-inset .grill {
+      visibility: visible;
+
+    }
+
+    /* lineart dark*/
+
+    .lineart.dark path,
+    .lineart.dark rect,
+    .lineart.dark circle,
+    .lineart.dark ellipse {
+      fill: #333 !important;
+      stroke: #EAEAEA !important;
+    }
+    .lineart.dark .screen rect {
+      fill: #888 !important;
+    }
+
+    /* wireframe */
+
+    .wireframe path,
+    .wireframe rect,
+    .wireframe circle,
+    .wireframe ellipse {
+      fill: none !important;
+      stroke: #fff !important;
+    }
+    .wireframe .speaker-inset .grill {
+      visibility: visible;
+    }
+    /* wireframe dark */
+
+    .wireframe.dark path,
+    .wireframe.dark rect,
+    .wireframe.dark circle,
+    .wireframe.dark ellipse {
+      stroke: #000 !important;
+    }
+
+
+  </style>
+  <defs>
+    <linearGradient id="grey-grad" gradientUnits="userSpaceOnUse" x1="143.8" y1="53.5" x2="143.8" y2="45.8">
+      <stop offset="0" style="stop-color:#575858" />
+      <stop offset="1" style="stop-color:#282828" />
+    </linearGradient>
+    <linearGradient id="iphone-grad" gradientUnits="userSpaceOnUse" x1="141.0942" y1="540.5801" x2="141.0942" y2="6.4111">
+      <stop offset="0" style="stop-color:#282828"></stop>
+      <stop offset="0.0097" style="stop-color:#262626"></stop>
+      <stop offset="0.1219" style="stop-color:#161515"></stop>
+      <stop offset="0.2609" style="stop-color:#0A0A0A"></stop>
+      <stop offset="0.4566" style="stop-color:#040303"></stop>
+      <stop offset="1" style="stop-color:#020101"></stop>
+    </linearGradient>
+    <linearGradient id="reflection-grad" gradientUnits="userSpaceOnUse" x1="210.8569" y1="6.4106" x2="210.8569" y2="375.4839">
+      <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.2"></stop>
+      <stop offset="0.1413" style="stop-color:#FFFFFF;stop-opacity:0.1859"></stop>
+      <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.1"></stop>
+    </linearGradient>
+    <clipPath id="button-shadow-clip">
+      <path d="M166.782 494.501c0 14.403-11.678 26.078-26.083 26.078c-14.406 0-26.084-11.675-26.084-26.078 c0-14.408 11.679-26.087 26.084-26.087C155.104 468.4 166.8 480.1 166.8 494.501z" />
+    </clipPath>
+  </defs>
+  <g class="iphone">
+    <g class="metal-buttons">
+      <path d="M7.054 129.455c0 1.104-0.896 2-2 2H3.638c-1.104 0-2-0.896-2-2 v-15c0-1.104 0.896-2 2-2h1.417c1.104 0 2 0.9 2 2V129.455z" />
+      <path d="M7.054 177.08c0 1.104-0.896 2-2 2H3.638c-1.104 0-2-0.896-2-2 v-15c0-1.104 0.896-2 2-2h1.417c1.104 0 2 0.9 2 2V177.08z" />
+      <path d="M7.054 86.705c0 1.104-0.896 2-2 2H3.638c-1.104 0-2-0.896-2-2 v-22c0-1.104 0.896-2 2-2h1.417c1.104 0 2 0.9 2 2V86.705z" />
+      <rect x="189.4" y="0.6" width="43.7" height="2.3" />
+      <g class="metal-buttons-shadows">
+        <rect x="1.2" y="123" width="5.7" height="4.2" />
+        <rect x="1.2" y="80" width="5.7" height="4.2" />
+        <rect x="1.2" y="171" width="5.7" height="4.2" />
+      </g>
+
+    </g>
+    <g class="metal-body">
+      <path d="M278.034 504.08c0 22.092-17.908 40-40 40h-194 c-22.091 0-40-17.908-40-40v-461c0-22.092 17.909-40 40-40h194c22.092 0 40 17.9 40 40V504.08z" />
+      <g class="metal-body-shadows">
+        <rect x="3.2" y="483" width="5.7" height="4.2" />
+        <rect x="273.2" y="483" width="5.7" height="4.2" />
+      </g>
+    </g>
+    <g class="phone-face">
+      <path d="M275.488 500.6 c0 22.092-17.908 40-40 40H46.7c-22.092 0-40-17.908-40-40V46.411c0-22.092 17.908-40 40-40h188.788c22.092 0 40 17.9 40 40 V500.58z" />
+    </g>
+    <g class="circle-button">
+      <circle cx="141.3" cy="494.7" r="25.9" />
+      <path d="M149.699 499.339c0 2.065-1.675 3.74-3.741 3.74h-9.352 c-2.066 0-3.741-1.675-3.741-3.74v-9.353c0-2.065 1.675-3.74 3.741-3.74h9.352c2.066 0 3.7 1.7 3.7 3.74V499.339z" />
+    </g>
+    <g class="button-shadow">
+      <circle cx="141.3" cy="452.7" r="42" />
+    </g>
+    <g class="camera">
+      <circle cx="96" cy="49.5" r="3.5" />
+      <ellipse cx="96" cy="49.7" rx="1.1" ry="1" />
+    </g>
+    <g class="speaker-inset">
+      <path class="speaker-inset-shadow" d="M169.867 49.497c0 3.452-2.486 6.25-5.554 6.25h-40.726c-3.067 0-5.554-2.798-5.554-6.25l0 0 c0-3.452 2.487-6.25 5.554-6.25h40.726C167.381 43.2 169.9 46 169.9 49.497L169.867 49.497z" />
+      <path d="M167.42 49.686c0 2.127-1.725 3.852-3.852 3.852h-39.516c-2.127 0-3.852-1.725-3.852-3.852l0 0 c0-2.127 1.725-3.852 3.852-3.852h39.516C165.695 45.8 167.4 47.6 167.4 49.686L167.42 49.686z" />
+      <g class="grill">
+        <ellipse cx="124.5" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="124.6" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="127.2" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="127.2" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="129.9" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="129.9" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="132.6" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="132.6" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="135.2" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="135.3" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="137.9" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="137.9" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="140.6" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="140.6" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="143.3" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="143.3" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="145.9" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="145.9" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="148.6" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="148.6" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="151.3" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="151.3" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="154" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="154" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="156.6" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="156.6" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="159.3" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="159.3" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="162" cy="48.8" rx="0.8" ry="0.7" />
+        <ellipse cx="162" cy="48.8" rx="0.7" ry="0.6" />
+        <ellipse cx="123.1" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="123.2" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="125.8" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="125.8" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="128.5" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="128.5" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="131.2" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="131.2" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="133.8" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="133.9" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="136.5" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="136.5" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="139.2" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="139.2" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="141.9" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="141.9" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="144.5" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="144.6" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="147.2" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="147.2" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="149.9" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="149.9" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="152.6" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="152.6" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="155.2" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="155.3" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="157.9" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="157.9" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="160.6" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="160.6" cy="50.5" rx="0.7" ry="0.6" />
+        <ellipse cx="163.3" cy="50.5" rx="0.8" ry="0.7" />
+        <ellipse cx="163.3" cy="50.5" rx="0.7" ry="0.6" />
+      </g>
+    </g>
+    <g class="screen">
+      <rect x="23" y="93" width="236" height="353" />
+      <image class="device-image" xlink:href="" x="23" y="93" width="236" height="353" />
+    </g>
+    <g class="reflection">
+      <path d="M275.782,374.58c0,22.092-129.85-368.169-129.85-368.169h89.85c22.092,0,40,17.908,40,40V374.58z"></path>
+    </g>
+  </g>
+</svg>
+
+  </main>
+	<script src="./js/main.js" type="text/javascript"></script>
   </body>
 </html>

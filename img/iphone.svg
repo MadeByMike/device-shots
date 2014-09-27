@@ -1,0 +1,171 @@
+
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="280px"
+           height="560px" viewBox="0 0 280 560" enable-background="new 0 0 280 560" xml:space="preserve">
+        <style>
+          /* Defaults */
+          .reflection { 
+            visibility: hidden;
+          }
+          .screen rect { fill: #DDD; }
+          .circle-button circle { stroke: #222; }
+          .circle-button path { stroke: #999; }
+          .button-shadow circle{
+            visibility: hidden;
+          }
+          .camera circle,
+          .camera ellipse{
+            fill:	#333;
+          }
+          .speaker-inset path{
+            fill:	#333;
+          }
+          .speaker-inset .speaker-inset-shadow{
+            fill:	#000;
+          }
+          .speaker-inset .grill{
+            visibility: hidden;
+          }
+          .grill ellipse {
+            fill:	#090405;
+          }
+          .grill ellipse:nth-child(odd) {
+            fill:	#2E2E2F;
+          }
+        </style>
+        <defs>
+          <linearGradient id="grey-grad" gradientUnits="userSpaceOnUse" x1="143.8" y1="53.5" x2="143.8" y2="45.8">
+            <stop offset="0" style="stop-color:#575858" />
+            <stop offset="1" style="stop-color:#282828" />
+          </linearGradient>
+          <linearGradient id="iphone-grad" gradientUnits="userSpaceOnUse" x1="141.0942" y1="540.5801" x2="141.0942" y2="6.4111">
+            <stop offset="0" style="stop-color:#282828"></stop>
+            <stop offset="0.0097" style="stop-color:#262626"></stop>
+            <stop offset="0.1219" style="stop-color:#161515"></stop>
+            <stop offset="0.2609" style="stop-color:#0A0A0A"></stop>
+            <stop offset="0.4566" style="stop-color:#040303"></stop>
+            <stop offset="1" style="stop-color:#020101"></stop>
+          </linearGradient>
+          <linearGradient id="reflection-grad" gradientUnits="userSpaceOnUse" x1="210.8569" y1="6.4106" x2="210.8569" y2="375.4839">
+            <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.2"></stop>
+            <stop offset="0.1413" style="stop-color:#FFFFFF;stop-opacity:0.1859"></stop>
+            <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0.1"></stop>
+          </linearGradient>
+          <clipPath id="button-shadow-clip">
+            <path d="M166.782 494.501c0 14.403-11.678 26.078-26.083 26.078c-14.406 0-26.084-11.675-26.084-26.078 c0-14.408 11.679-26.087 26.084-26.087C155.104 468.4 166.8 480.1 166.8 494.501z"/>
+          </clipPath>
+        </defs>
+        <g class="iphone">
+          <g class="metal-buttons">
+            <path d="M7.054 129.455c0 1.104-0.896 2-2 2H3.638c-1.104 0-2-0.896-2-2 v-15c0-1.104 0.896-2 2-2h1.417c1.104 0 2 0.9 2 2V129.455z" />
+            <path d="M7.054 177.08c0 1.104-0.896 2-2 2H3.638c-1.104 0-2-0.896-2-2 v-15c0-1.104 0.896-2 2-2h1.417c1.104 0 2 0.9 2 2V177.08z" />
+            <path d="M7.054 86.705c0 1.104-0.896 2-2 2H3.638c-1.104 0-2-0.896-2-2 v-22c0-1.104 0.896-2 2-2h1.417c1.104 0 2 0.9 2 2V86.705z" />
+            <rect x="189.4" y="0.6" width="43.7" height="2.3"/>
+            <g class="metal-buttons-shadows">
+              <rect x="1.2" y="123" width="5.7" height="4.2" />
+              <rect x="1.2" y="80" width="5.7" height="4.2" />
+              <rect x="1.2" y="171" width="5.7" height="4.2" />
+            </g>
+
+          </g>
+          <g class="metal-body">
+            <path d="M278.034 504.08c0 22.092-17.908 40-40 40h-194 c-22.091 0-40-17.908-40-40v-461c0-22.092 17.909-40 40-40h194c22.092 0 40 17.9 40 40V504.08z"/>
+            <g class="metal-body-shadows">
+              <rect x="3.2" y="483" width="5.7" height="4.2" />
+              <rect x="273.2" y="483" width="5.7" height="4.2" />
+            </g>
+          </g>
+          <g class="phone-face">
+            <path d="M275.488 500.6 c0 22.092-17.908 40-40 40H46.7c-22.092 0-40-17.908-40-40V46.411c0-22.092 17.908-40 40-40h188.788c22.092 0 40 17.9 40 40 V500.58z" />
+          </g>
+          <g class="circle-button">
+            <circle cx="141.3" cy="494.7" r="25.9"/>
+            <path d="M149.699 499.339c0 2.065-1.675 3.74-3.741 3.74h-9.352 c-2.066 0-3.741-1.675-3.741-3.74v-9.353c0-2.065 1.675-3.74 3.741-3.74h9.352c2.066 0 3.7 1.7 3.7 3.74V499.339z"/>
+          </g>
+		  <g class="button-shadow">
+			<circle cx="141.3" cy="452.7" r="42" />
+		  </g>
+          <g class="camera">
+            <circle cx="96" cy="49.5" r="3.5"/>
+            <ellipse cx="96" cy="49.7" rx="1.1" ry="1"/>
+          </g>
+          <g class="speaker-inset">
+		  	<path class="speaker-inset-shadow" d="M169.867 49.497c0 3.452-2.486 6.25-5.554 6.25h-40.726c-3.067 0-5.554-2.798-5.554-6.25l0 0 c0-3.452 2.487-6.25 5.554-6.25h40.726C167.381 43.2 169.9 46 169.9 49.497L169.867 49.497z" />
+            <path d="M167.42 49.686c0 2.127-1.725 3.852-3.852 3.852h-39.516c-2.127 0-3.852-1.725-3.852-3.852l0 0 c0-2.127 1.725-3.852 3.852-3.852h39.516C165.695 45.8 167.4 47.6 167.4 49.686L167.42 49.686z" />
+			  <g class="grill">
+				<ellipse cx="124.5" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="124.6" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="127.2" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="127.2" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="129.9" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="129.9" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="132.6" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="132.6" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="135.2" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="135.3" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="137.9" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="137.9" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="140.6" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="140.6" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="143.3" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="143.3" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="145.9" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="145.9" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="148.6" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="148.6" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="151.3" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="151.3" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="154" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="154" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="156.6" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="156.6" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="159.3" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="159.3" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="162" cy="48.8" rx="0.8" ry="0.7" />
+				<ellipse cx="162" cy="48.8" rx="0.7" ry="0.6" />
+				<ellipse cx="123.1" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="123.2" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="125.8" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="125.8" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="128.5" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="128.5" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="131.2" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="131.2" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="133.8" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="133.9" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="136.5" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="136.5" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="139.2" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="139.2" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="141.9" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="141.9" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="144.5" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="144.6" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="147.2" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="147.2" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="149.9" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="149.9" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="152.6" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="152.6" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="155.2" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="155.3" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="157.9" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="157.9" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="160.6" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="160.6" cy="50.5" rx="0.7" ry="0.6" />
+				<ellipse cx="163.3" cy="50.5" rx="0.8" ry="0.7" />
+				<ellipse cx="163.3" cy="50.5" rx="0.7" ry="0.6" />
+			  </g>
+          </g>
+          <g class="screen" id="drop-zone">
+            <rect x="23" y="93" width="236" height="353" />
+            <rect x="30" y="100" width="222" height="338" id="drop-border" />
+            <text x="62" y="260" font-family="Verdana" font-size="16" font-weight="bold" fill="#555" > Drop Images Here </text>
+          </g> 
+		  <g> 
+            <image id="product-image" xlink:href="" x="23" y="93" width="236" height="353" />
+		  </g> 
+          <g class="reflection"> 
+            <path d="M275.782,374.58c0,22.092-129.85-368.169-129.85-368.169h89.85c22.092,0,40,17.908,40,40V374.58z"></path>
+          </g>
+        </g>
+      </svg>
