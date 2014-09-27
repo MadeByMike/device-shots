@@ -116,9 +116,9 @@
 		}
 
 		function cache_image() {
-			$('#export-form button').disabled = true;
+			$('#export-form button').prop("disabled", true);
 			svg_to_image(device_in_use.svg, 50, function(dataURI) {
-				$('#export-form button').disabled = false;
+				$('#export-form button').prop("disabled", false);
 				device_in_use.export_cache_cache = dataURI;
 			});
 			// Let's cache all images?
