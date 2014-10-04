@@ -81,11 +81,19 @@
 
 
 		function svg_to_image(svg, margin, callback) {
-			// Change to blob to overcome data URI legth restrictions in some browsers?
+			// Change to blob to overcome data URI length restrictions in some browsers?
+			var image, svgdata, dataURI;
+			image = document.createElement("img");
+			if (svg.outerHTML) {
+				svgdata = svg.outerHTML;
+			}else {
+				var div = document.createElement("div");
+				var clone = svg.cloneNode(true);
+				div.appendChild(clone);
+				svgdata = div.innerHTML;
+			}
+			dataURI = 'data:image/svg+xml,' + encodeURIComponent(svgdata);
 
-			var image = document.createElement("img");
-			var svgdata = svg.outerHTML;
-			var dataURI = 'data:image/svg+xml,' + svgdata;
 			image.onload = function() {
 				var canvas = document.createElement("canvas");
 				canvas.width = device_in_use.export_cache_size[0] + (margin * 2);
@@ -106,7 +114,7 @@
 					screen = device_in_use.svg.querySelector('.device-image'),
 					perfect_ratio = screen.height / screen.width;
 				if (Math.round(ratio * 1000) / 1000 !== perfect_ratio) {
-					$('#messages').innerHTML = '<div class="message"><p><a href="javascrip:;" class="close">close</a>Hey! The image you placed isn\'t a great shape for the device you\'ve selected. It\'ll still work - but it might look a bit strange.</p></div>';
+					$('#messages').innerHTML = '<div class="message"><p><a href="javascript:;" class="close">close</a>Hey! The image you placed isn\'t a great shape for the device you\'ve selected. It\'ll still work - but it might look a bit strange.</p></div>';
 				} else {
 					$('#messages').innerHTML = '';
 				}
@@ -119,6 +127,7 @@
 			$('#export-form button').disabled = true;
 			svg_to_image(device_in_use.svg, 50, function(dataURI) {
 				$('#export-form button').disabled = false;
+				$('#export-form button').removeAttribute("disabled");
 				device_in_use.export_cache_cache = dataURI;
 			});
 			// Let's cache all images?
